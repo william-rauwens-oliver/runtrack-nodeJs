@@ -1,7 +1,6 @@
 const fs = require('fs');
 const path = require('path');
 
-// Récupérer le chemin absolu du répertoire parent
 const parentDirectory = path.resolve('..');
 
 function listDirectories(directory) {
@@ -14,5 +13,5 @@ function listDirectories(directory) {
 
 const parentDirectories = listDirectories(parentDirectory);
 
-console.log('Dossiers dans le répertoire parent :');
+console.log('Dossiers dans le répertoire courant :');
 parentDirectories.forEach(directory => console.log(directory));
