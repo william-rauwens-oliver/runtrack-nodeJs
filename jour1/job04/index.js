@@ -1,17 +1,18 @@
 const fs = require('fs');
+const path = require('path');
 
-const currentDirectory = process.cwd();
+// Récupérer le chemin absolu du répertoire parent
+const parentDirectory = path.resolve('..');
 
-fs.readdir(currentDirectory, { withFileTypes: true }, (err, files) => {
-  if (err) {
-    console.error('Erreur lors de la lecture du répertoire:', err);
-    return;
-  }
+function listDirectories(directory) {
+  const files = fs.readdirSync(directory);
 
-  const directories = files.filter(file => file.isDirectory());
+  const directories = files.filter(file => fs.statSync(path.join(directory, file)).isDirectory());
 
-  console.log('Dossiers présents dans le répertoire courant:');
-  directories.forEach(directory => {
-    console.log(directory.name);
-  });
-});
+  return directories;
+}
+
+const parentDirectories = listDirectories(parentDirectory);
+
+console.log('Dossiers dans le répertoire parent :');
+parentDirectories.forEach(directory => console.log(directory));
