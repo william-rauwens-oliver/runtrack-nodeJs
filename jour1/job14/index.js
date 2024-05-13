@@ -5,8 +5,12 @@ const path = require('path');
 const server = http.createServer((req, res) => {
     let filePath = './index.html';
 
-    if (req.url === '/about') {
+    if (req.url === '/') {
+        filePath = './index.html';
+    } else if (req.url === '/about') {
         filePath = './about.html';
+    } else {
+        filePath = './error.html';
     }
 
     fs.readFile(path.join(__dirname, filePath), (err, content) => {
@@ -23,5 +27,5 @@ const server = http.createServer((req, res) => {
 const PORT = process.env.PORT || 8888;
 
 server.listen(PORT, () => {
-    console.log(`Serveur démarré sur http://localhost:${PORT}/`);
+    console.log(`Server running at http://localhost:${PORT}/`);
 });
