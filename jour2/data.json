@@ -2,9 +2,27 @@
   "tasks": [
     {
       "id": "1",
+      "title": "Finaliser le design du site web",
+      "description": "Terminer la conception des pages et des fonctionnalités du site web",
+      "status": "in_progress"
+    },
+    {
+      "id": "2",
       "title": "Tâche mise à jour",
       "description": "Cette tâche a été mise à jour",
       "status": "completed"
+    },
+    {
+      "id": "4",
+      "title": "Effectuer la revue de code",
+      "description": "Passer en revue le code des dernières fonctionnalités ajoutées et proposer des améliorations",
+      "status": "pending"
+    },
+    {
+      "id": "5",
+      "title": "Nouvelle tâche",
+      "description": "Ceci est une nouvelle tâche à créer",
+      "status": "pending"
     }
   ]
 }
