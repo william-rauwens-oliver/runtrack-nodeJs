@@ -1,0 +1,16 @@
+db.product.insertMany([
+    {
+        name: "Pantalon noir",
+        description: "Un pantalon noir",
+        price: 14.99,
+        quantity: 12
+    },
+    {
+        name: "chaussettes",
+        description: "chaussettes cool !",
+        price: 6,
+        quantity: 6
+    }
+])
+
+Ensuite j'ai fait "db.product.find()" pour vérifier que c'est bien dans la collection "product".
