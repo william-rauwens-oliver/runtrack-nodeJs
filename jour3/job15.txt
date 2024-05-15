@@ -1,0 +1,4 @@
+db.category.updateOne(
+    { name: "bébé" },
+    { $set: { name: "Vêtements pour enfant" } }
+)
