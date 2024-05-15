@@ -1,1 +1,0 @@
-db.product.findOne({ "_id": ObjectId("66446c71ced7cccd2421851e") })

@@ -1,5 +1,0 @@
-db.category.insertMany([
-    { name: "Vêtements" },
-    { name: "Chaussures" },
-    { name: "Accessoires" }
-])
