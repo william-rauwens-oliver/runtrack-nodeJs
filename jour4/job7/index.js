@@ -2,7 +2,7 @@ const readline = require('readline');
 const mongoose = require('mongoose');
 
 mongoose.connect('mongodb://localhost:27017/LaPlateforme')
-  .then(() => console.log('Connected to MongoDB...'))
+  .then(() => console.log('Connection to MongoDB...'))
   .catch(err => console.error('Could not connect to MongoDB...', err));
 
 const studentSchema = new mongoose.Schema({
