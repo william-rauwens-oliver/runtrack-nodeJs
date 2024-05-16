@@ -13,7 +13,7 @@ const studentSchema = new mongoose.Schema({
   year_id: { type: mongoose.Schema.Types.ObjectId, ref: 'year' }
 });
 
-const Student = mongoose.model('student', studentSchema);
+const Student = mongoose.model('Student', studentSchema, 'student');
 
 const rl = readline.createInterface({
   input: process.stdin,
