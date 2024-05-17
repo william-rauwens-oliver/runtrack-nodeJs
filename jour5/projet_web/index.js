@@ -14,6 +14,10 @@ app.get('/about', (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'about.html'));
 });
 
+app.use((req, res) => {
+  res.status(404).sendFile(path.join(__dirname, 'views', 'error404.html'));
+});
+
 app.listen(port, () => {
   console.log(`Le serveur écoute sur http://localhost:${port}`);
 });
