@@ -4,7 +4,11 @@ const app = express();
 const port = 80;
 
 app.get('/', (req, res) => {
-  res.send('Hello World !');
+  res.send('Bienvenue sur la page d\'accueil de notre site !');
+});
+
+app.get('/about', (req, res) => {
+  res.send('Ceci est la page de présentation de notre projet. Notre projet vise à ...');
 });
 
 app.listen(port, () => {
