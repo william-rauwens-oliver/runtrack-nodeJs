@@ -1,4 +1,3 @@
-/* Réinitialisation CSS */
 body, h1, p {
   margin: 0;
   padding: 0;
@@ -27,7 +26,6 @@ p {
   line-height: 1.5;
 }
 
-/* Styles pour les boutons */
 .button {
   display: inline-block;
   padding: 10px 20px;
@@ -45,7 +43,6 @@ p {
   background-color: #45a049;
 }
 
-/* Nouveaux styles pour l'image */
 .image-container {
   margin: 20px auto;
   width: 300px;
@@ -61,7 +58,6 @@ p {
   object-fit: cover;
 }
 
-/* Réinitialisation CSS */
 body, h1, p {
   margin: 0;
   padding: 0;
@@ -90,7 +86,6 @@ p {
   line-height: 1.5;
 }
 
-/* Styles pour les boutons */
 .button {
   display: inline-block;
   padding: 10px 20px;
@@ -108,7 +103,6 @@ p {
   background-color: #45a049;
 }
 
-/* Nouveaux styles pour la page d'accueil */
 .hero-section {
   background-image: url('/hero-background.jpg');
   background-size: cover;

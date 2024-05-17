@@ -1,8 +1,5 @@
-// db.js
-
 const mongoose = require('mongoose');
 
-// Connexion à la base de données
 mongoose.connect('mongodb://localhost:27017/LaPlateforme', {
     useNewUrlParser: true,
     useUnifiedTopology: true

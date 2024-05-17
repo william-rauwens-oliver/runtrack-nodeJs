@@ -53,6 +53,23 @@ app.post('/student', async (req, res) => {
   }
 });
 
+app.put('/student/:id', async (req, res) => {
+  const id = req.params.id;
+  const newData = req.body;
+  const collection = await connectToDatabase();
+  try {
+    const result = await collection.updateOne({ _id: new ObjectId(id) }, { $set: newData });
+    if (result.modifiedCount === 0) {
+      res.status(404).json({ message: 'Étudiant non trouvé' });
+    } else {
+      res.json({ message: 'Étudiant mis à jour avec succès' });
+    }
+  } catch (error) {
+    console.error('Une erreur s\'est produite lors de la mise à jour de l\'étudiant :', error);
+    res.status(500).json({ message: 'Erreur serveur' });
+  }
+});
+
 app.delete('/student/:id', async (req, res) => {
   const id = req.params.id;
   const collection = await connectToDatabase();
