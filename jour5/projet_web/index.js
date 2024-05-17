@@ -4,7 +4,7 @@ const app = express();
 
 const port = 80;
 
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'jour5', 'projet_web', 'public')));
 
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'index.html'));
