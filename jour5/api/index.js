@@ -8,14 +8,12 @@ const dbName = 'LaPlateforme';
 
 app.use(express.json());
 
-// Connexion à la base de données MongoDB
 async function connectToDatabase() {
   const client = new MongoClient(url, { useNewUrlParser: true, useUnifiedTopology: true });
   await client.connect();
   return client.db(dbName).collection('student');
 }
 
-// Route GET pour récupérer tous les étudiants
 app.get('/student', async (req, res) => {
   const collection = await connectToDatabase();
   try {
@@ -27,7 +25,6 @@ app.get('/student', async (req, res) => {
   }
 });
 
-// Route GET pour récupérer un étudiant spécifique par son ID
 app.get('/student/:id', async (req, res) => {
   const id = req.params.id;
   const collection = await connectToDatabase();
@@ -44,7 +41,6 @@ app.get('/student/:id', async (req, res) => {
   }
 });
 
-// Route POST pour ajouter un étudiant à la collection
 app.post('/student', async (req, res) => {
   const studentData = req.body;
   const collection = await connectToDatabase();
@@ -57,7 +53,6 @@ app.post('/student', async (req, res) => {
   }
 });
 
-// Route DELETE pour supprimer un étudiant de la collection
 app.delete('/student/:id', async (req, res) => {
   const id = req.params.id;
   const collection = await connectToDatabase();
@@ -74,7 +69,6 @@ app.delete('/student/:id', async (req, res) => {
   }
 });
 
-// Démarrer le serveur
 app.listen(port, () => {
   console.log(`Serveur démarré sur http://localhost:${port}`);
 });
